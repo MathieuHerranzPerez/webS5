@@ -1,7 +1,7 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
@@ -17,34 +17,6 @@
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 
-        <script> // todo changer de place
-            function setStyle(value) {
-                $('#css').attr('href', 'css/' + value);
-
-                var expiration = new Date();
-                expiration.setTime(expiration.getTime() + 3600000);
-                document.cookie = "style=" + value + "; expires=" + expiration.toGMTString();
-            }
-
-            function getStyleCookie() {
-                var cookieArray = document.cookie.split(';');
-                for( var i = 0; cookieArray.length > i; ++i ){
-                    var cookieStr = cookieArray[i];
-                    var nameplace = cookieStr.indexOf("style=");
-                    if( nameplace != -1)
-                        return cookieStr.substring((nameplace + 6), cookieStr.length);
-                }
-                return "";
-            }
-
-            function readStyleCookie() {
-                var style = getStyleCookie();
-                if( style != "" ) {
-                    $('#css').attr('herf', 'css/' + style);
-                }
-            }
-        </script>
-
 
     </head>
     <body onload="readStyleCookie()">
@@ -52,23 +24,30 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#">Mathieu Herranz Perez</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <button onclick="setStyle('main.css')">Style1</button>
+                <button onclick="setStyle('style2.css')">Style2</button>
+                <div class="menu">
+                    <ul>
+                        <li><a class="lienMenu" href="index.html">Accueil</a></li>
+                        <li><a class="lienMenu" href="telechargements.html">Téléchargements</a></li>
+                        <li><a class="lienMenu" href="mecontacter.html">Me contacter</a></li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
 
-        </div><!--/.navbar-collapse -->
-          <button onclick="setStyle('main.css')">Style1</button>
-          <button onclick="setStyle('style2.css')">Style2</button>
-      </div>
+        </div>
     </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
