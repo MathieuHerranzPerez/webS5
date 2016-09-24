@@ -12,21 +12,46 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <style>
-            body {
-                padding-top: 50px;
-                padding-bottom: 20px;
-            }
-        </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/main.css" id="css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+        <script> // todo changer de place
+            function setStyle(value) {
+                $('#css').attr('href', 'css/' + value);
+
+                var expiration = new Date();
+                expiration.setTime(expiration.getTime() + 3600000);
+                document.cookie = "style=" + value + "; expires=" + expiration.toGMTString();
+            }
+
+            function getStyleCookie() {
+                var cookieArray = document.cookie.split(';');
+                for( var i = 0; cookieArray.length > i; ++i ){
+                    var cookieStr = cookieArray[i];
+                    var nameplace = cookieStr.indexOf("style=");
+                    if( nameplace != -1)
+                        return cookieStr.substring((nameplace + 6), cookieStr.length);
+                }
+                return "";
+            }
+
+            function readStyleCookie() {
+                var style = getStyleCookie();
+                if( style != "" ) {
+                    $('#css').attr('herf', 'css/' + style);
+                }
+            }
+        </script>
+
+
     </head>
-    <body>
+    <body onload="readStyleCookie()">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -39,16 +64,10 @@
           <a class="navbar-brand" href="#">Project name</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
+
         </div><!--/.navbar-collapse -->
+          <button onclick="setStyle('main.css')">Style1</button>
+          <button onclick="setStyle('style2.css')">Style2</button>
       </div>
     </nav>
 
