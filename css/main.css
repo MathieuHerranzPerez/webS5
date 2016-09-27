@@ -15,6 +15,8 @@
 
 body {
     font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 a,a:hover,a:link,a:visited,a:active,a:focus{
@@ -22,50 +24,67 @@ a,a:hover,a:link,a:visited,a:active,a:focus{
 }
 
 
-#divTitle {
-    margin-top: 11px;
-}
-a.titleMathieu {
-    color: #FFFFFF;
-    font-size: 20px;
-}
+/*                      MENU                        */
 
-a span {
-    color: #FF7800;
-}
-
-a.lienMenu {
-    text-align: center;
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 15%;
+    padding-right: 15%;
+    overflow: hidden;
+    background-color: rgb(66,60,59);
     height: 100%;
 }
 
+/* Float the list items side by side */
+ul.topnav li:not(.liLogo) {
+    float: right;
+}
 
-nav#topMenu {
+/* Style the links inside the list items */
+a.ongletPage{
+    vertical-align:middle;
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+    line-height:40px;
+}
+
+#prenomNom{
+    font-size: 2.2em;
+    vertical-align:middle;
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    line-height:68px;
+    cursor: default;
+}
+
+/* Change background color of links on hover */
+ul.topnav li a:hover:not(.active) {background-color: rgb(50, 44, 43);
+
+}
+
+ul.topnav .active:not(.admin2) {background-color: #EEEEEE;
+    color: rgb(255,160,0);
+    height: 40px;
     font-weight: bold;
 }
 
-div.menu {
-    display: table;
-    float: right;
-    color: #FF7800;
-}
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {display: none;
+    font-size: 2em;
+    text-decoration-color: brown;}
 
-.active {
-    color: #FF7800;
-    background-color: #FFFFFF;
-}
 
-ul li {
-    display: table-cell;
-    position: relative;
-    height: 50px;
-    vertical-align: middle;
-}
-
-ul li:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-ul {
-    margin: 0;
+.icoListe {
+    text-decoration: none;
+    color: #f2f2f2;
+    line-height: 68px;
 }

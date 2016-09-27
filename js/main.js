@@ -42,3 +42,19 @@ function readStyleCookie() {
         $('#css').attr('href', 'css/' + style);
     }
 }
+
+
+
+$('.topnav li a').click( function () {
+
+    var name = $(this).attr("name");
+
+    var actualSection = $('nav .active').attr("name");
+    $("." + actualSection).removeClass("active");
+    $("." + name).addClass("active");
+
+    $("#"+ actualSection).slideUp( function() {
+        $("#"+ name).fadeIn();
+    });
+    console.log(actualSection + " -> " + name);
+});
