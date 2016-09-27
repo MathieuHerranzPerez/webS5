@@ -1,25 +1,44 @@
-function setStyle(value) {
-    $('#css').attr('href', 'css/' + value);
+/**
+ * Change le style en value.css et creer un cookie name d'une durée de 1 an
+ * @param value
+ * @param name
+ */
+function setStyleCookies(value, name) {
+    $('#css').attr('href', 'css/' + value);                     // on change de style
 
-    var expiration = new Date();
-    expiration.setTime(expiration.getTime() + 3600000);
-    document.cookie = "style=" + value + "; expires=" + expiration.toGMTString();
+    var today = new Date();
+    var expires = new Date();
+    expires.setTime(today.getTime() + (360*24*60*60*1000));     // 1 an
+    document.cookie = name + "=" + encodeURIComponent(value) + ";expires=" + expires.toGMTString();
 }
 
-function getStyleCookie() {
-    var cookieArray = document.cookie.split(';');
-    for( var i = 0; cookieArray.length > i; ++i ){
-        var cookieStr = cookieArray[i];
-        var nameplace = cookieStr.indexOf("style=");
-        if( nameplace != -1)
-            return cookieStr.substring((nameplace + 6), cookieStr.length);
+/**
+ * Lit le cookie name et return sa valeur
+ * @param name
+ * @returns {*}
+ */
+function getStyleCookie(name) {
+    var cookContent = document.cookie, cookEnd, i, j;
+    name = name + "=";
+    for (i=0, c=cookContent.length; i<c; i++) {
+        j = i + name.length;
+        if (cookContent.substring(i, j) == name) {
+            cookEnd = cookContent.indexOf(";", j);
+            if (cookEnd == -1) {
+                cookEnd = cookContent.length;
+            }
+            return decodeURIComponent(cookContent.substring(j, cookEnd));
+        }
     }
-    return "";
+    return null;
 }
 
+/**
+ * Regarde si il y a un cookie pour le style, dans quel cas adapte le style
+ */
 function readStyleCookie() {
-    var style = getStyleCookie();
-    if( style != "" ) {
-        $('#css').attr('herf', 'css/' + style);
+    var style = getStyleCookie('style');
+    if(style != "") {
+        $('#css').attr('href', 'css/' + style);
     }
 }
