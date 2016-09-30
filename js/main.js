@@ -5,6 +5,7 @@
  */
 function setStyleCookies(value, name) {
     $('#css').attr('href', 'css/' + value);                     // change style
+    console.log('css/' + value);
 
     var today = new Date();
     var expires = new Date();
@@ -38,7 +39,7 @@ function getStyleCookie(name) {
  */
 function readStyleCookie() {
     var style = getStyleCookie('style');
-    if(style != "") {
+    if(style != null) {
         $('#css').attr('href', 'css/' + style);
     }
 }
@@ -46,6 +47,8 @@ function readStyleCookie() {
 
 
 $(document).ready(function() {
+    readStyleCookie();
+
     $('.dropBtn').click(function () {
         $('.ulTopNav').slideToggle('medium');
     })

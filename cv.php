@@ -3,7 +3,6 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
     <?php
         displayHeader("Cv");
     ?>
@@ -11,9 +10,10 @@
         <?php
             displayMenu("cv");
         ?>
-    </body>
 
-    <?php
+
+        <?php
         displayFooter();
-    ?>
+        ?>
+    </body>
 </html>

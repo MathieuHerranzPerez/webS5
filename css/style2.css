@@ -1,3 +1,30 @@
 body {
-    color: red;
+
+}
+
+div.changeStyle {
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+    height: 300px;
+}
+div.center {
+    padding: auto;
+    height: 80%;
+}
+div.btnStyle {
+    width: 40%;
+    height: 80%;
+    float: left;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+div#btnStyle1 {
+    background: url("../img/montagne2.jpg") no-repeat center;
+    background-size: cover;
+    margin-right: 20%;
+}
+div#btnStyle2 {
+    background: url("../img/montagne2.jpg") no-repeat center;
+    background-size: cover;
 }

@@ -2,7 +2,6 @@
     require_once("./core/util.php");
 ?>
 <!DOCTYPE html>
-    <html lang="en">
     <?php
         displayHeader("Téléchargements");
     ?>
@@ -10,9 +9,8 @@
         <?php
             displayMenu("download");
         ?>
+        <?php
+            displayFooter();
+        ?>
     </body>
-
-    <?php
-        displayFooter();
-    ?>
 </html>
