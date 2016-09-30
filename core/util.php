@@ -10,14 +10,30 @@
             <a class="dropBtn icon" href="#">☰</a>
             <hr id="menuSeparation" />
             <ul class="ulTopNav">
-                <a href="index.php" id="home"><li class="ongletPage' . (($pageActive == "index") ? ' active' : '') . '">Accueil</li></a>
-                <a href="cv.php" id="cv"><li class="ongletPage' . (($pageActive == "cv") ? ' active' : '') . '">CV en ligne</li></a>
-                <a href="download.php" id="projects"><li class="ongletPage'  . (($pageActive == "download") ? ' active' : '') . '">Mes projets</li></a>
-                <a href="contact.php" id="contact"><li class="ongletPage' . (($pageActive == "contact") ? ' active' : '') . '">Me contacter</li></a>
+                <li class="ongletPage' . (($pageActive == "index") ? ' active' : '') . '"><a href="index.php" id="home">Accueil</a></li>
+                <li class="ongletPage' . (($pageActive == "cv") ? ' active' : '') . '"><a href="cv.php" id="cv">CV en ligne</a></li>
+                <li class="ongletPage'  . (($pageActive == "download") ? ' active' : '') . '"><a href="download.php" id="projects">Mes projets</a></li>
+                <li class="ongletPage' . (($pageActive == "contact") ? ' active' : '') . '"><a href="contact.php" id="contact">Me contacter</a></li>
 
             </ul>
         </nav>';
     }
+
+/*function displayMenu($pageActive) {
+    echo '<nav class="topNav">
+            <a href="./index.php" id="prenomNom"><span class="maj">M</span>athieu HERRANZ PEREZ</a>
+            <a class="dropBtn icon" href="#">☰</a>
+            <hr id="menuSeparation" />
+            <ul class="ulTopNav">
+                <li class="ongletPage' . (($pageActive == "index") ? ' active' : '') . '"><a href="index.php" id="home">Accueil</a></li>
+                <li class="ongletPage' . (($pageActive == "cv") ? ' active' : '') . '"><a href="cv.php" id="cv">CV en ligne</a></li>
+                <li class="ongletPage'  . (($pageActive == "download") ? ' active' : '') . '"><a href="download.php" id="projects">Mes projets</a></li>
+                <li class="ongletPage' . (($pageActive == "contact") ? ' active' : '') . '"><a href="contact.php" id="contact">Me contacter</a></li>
+
+            </ul>
+        </nav>';
+}*/
+
 /**
  * display the header with the title
  * @param $title
