@@ -23,11 +23,19 @@ a,a:hover,a:link,a:visited,a:active,a:focus{
     text-decoration: none;
 }
 
+ul {
+    padding: 0;
+    margin: 0;
+}
+hr {
+    margin: 0;
+}
 
-/*                      MENU                        */
 
-ul.topnav {
-    list-style-type: none;
+/*--------------- MENU --------------- */
+
+.topNav {
+
     margin: 0;
     padding: 0;
     padding-left: 15%;
@@ -38,25 +46,21 @@ ul.topnav {
 }
 
 /* Float the list items side by side */
-ul.topnav li:not(.liLogo) {
-    float: right;
+.ongletPage {
+    float: left;
 }
 
 /* Style the links inside the list items */
-a.ongletPage{
-    vertical-align:middle;
-    display: inline-block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+li.ongletPage{
+    padding: 14px 0;
     transition: 0.3s;
     font-size: 17px;
     line-height:40px;
+    font-weight: bold;
 }
 
 #prenomNom{
-    font-size: 2.2em;
+    font-size: 20px;
     vertical-align:middle;
     display: inline-block;
     color: #f2f2f2;
@@ -65,26 +69,81 @@ a.ongletPage{
     line-height:68px;
     cursor: default;
 }
-
-/* Change background color of links on hover */
-ul.topnav li a:hover:not(.active) {background-color: rgb(50, 44, 43);
-
+span.maj {
+    color: #FF8200;
+}
+ul.ulTopNav {
+    list-style-type: none;
+    float: right;
+    display: block;
 }
 
-ul.topnav .active:not(.admin2) {background-color: #EEEEEE;
-    color: rgb(255,160,0);
+
+
+li.ongletPage:hover:not(.active) {
+    background-color: rgb(50, 44, 43);
+}
+ul.ulTopNav li a {
+    color: #FFFFFF;
+}
+ul.ulTopNav li.active a {
+    color: #FF8200;
+}
+
+ul.ulTopNav li.active {
+    background-color: #F8F8F8;
     height: 40px;
-    font-weight: bold;
 }
 
-/* Hide the list item that contains the link that should open and close the topnav on small screens */
-ul.topnav li.icon {display: none;
+.ongletPage a {
+    padding: 20px 16px;
+}
+
+.icon {
+    display: none;
     font-size: 2em;
-    text-decoration-color: brown;}
+}
 
 
-.icoListe {
+.dropBtn {
     text-decoration: none;
     color: #f2f2f2;
     line-height: 68px;
+    float: right;
 }
+#menuSeparation {
+    color: rgb(66,60,59);
+    background-color: rgb(66,60,59);
+    height: 1px;
+}
+
+
+
+
+@media screen and (max-width: 1080px) {
+    ul.ulTopNav {
+        display: none;
+        float: none;
+    }
+    ul.ulTopNav {
+        float: none;
+    }
+    .icon {
+        display: inline-block;
+    }
+    .topNav {
+        padding: 0 5%;
+    }
+    #menuSeparation {
+        display: block;
+    }
+    .ongletPage {
+        float: none;
+    }
+}
+@media screen and (min-width: 1081px) {
+    #menuSeparation {
+        display: none;
+    }
+}
+

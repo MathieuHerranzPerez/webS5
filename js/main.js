@@ -1,19 +1,19 @@
 /**
- * Change le style en value.css et creer un cookie name d'une durée de 1 an
+ * change the style and create a cookie
  * @param value
  * @param name
  */
 function setStyleCookies(value, name) {
-    $('#css').attr('href', 'css/' + value);                     // on change de style
+    $('#css').attr('href', 'css/' + value);                     // change style
 
     var today = new Date();
     var expires = new Date();
-    expires.setTime(today.getTime() + (360*24*60*60*1000));     // 1 an
+    expires.setTime(today.getTime() + (360*24*60*60*1000));     // 1 year
     document.cookie = name + "=" + encodeURIComponent(value) + ";expires=" + expires.toGMTString();
 }
 
 /**
- * Lit le cookie name et return sa valeur
+ * read the cookie and return its value
  * @param name
  * @returns {*}
  */
@@ -34,7 +34,7 @@ function getStyleCookie(name) {
 }
 
 /**
- * Regarde si il y a un cookie pour le style, dans quel cas adapte le style
+ * look if there is already a cookie and change the style
  */
 function readStyleCookie() {
     var style = getStyleCookie('style');
@@ -45,16 +45,15 @@ function readStyleCookie() {
 
 
 
-$('.topnav li a').click( function () {
+$(document).ready(function() {
+    $('.dropBtn').click(function () {
+        $('.ulTopNav').slideToggle('medium');
+    })
 
-    var name = $(this).attr("name");
-
-    var actualSection = $('nav .active').attr("name");
-    $("." + actualSection).removeClass("active");
-    $("." + name).addClass("active");
-
-    $("#"+ actualSection).slideUp( function() {
-        $("#"+ name).fadeIn();
-    });
-    console.log(actualSection + " -> " + name);
+    window.onresize = function() {
+        var theWidth = window.innerWidth;
+        if(theWidth > 1080) {
+            $('.ulTopNav').css('display','block');
+        }
+    }
 });
