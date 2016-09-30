@@ -9,9 +9,14 @@
         <?php
             displayMenu("index");
         ?>
-
-        <button onclick="setStyleCookies('main.css', 'style')">Style1</button>
-        <button onclick="setStyleCookies('style2.css', 'style')">Style2</button>
+        <h1>Bienvenue</h1>
+        <div class="changeStyle">
+            <h3>Changez de style en toute simplicité</h3>
+            <div class="center">
+                <div class="btnStyle" id="btnStyle1" onclick="setStyleCookies('main.css', 'style')"></div>
+                <div class="btnStyle" id="btnStyle2" onclick="setStyleCookies('style2.css', 'style')"></div>
+            </div>
+        </div>
 
         <?php
             displayFooter();
