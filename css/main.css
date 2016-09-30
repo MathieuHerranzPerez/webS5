@@ -37,9 +37,7 @@ hr {
 .topNav {
 
     margin: 0;
-    padding: 0;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding: 0 15%;
     overflow: hidden;
     background-color: rgb(66,60,59);
     height: 100%;
@@ -52,7 +50,7 @@ hr {
 
 /* Style the links inside the list items */
 li.ongletPage{
-    padding: 14px 0;
+    padding: 14px 20px;
     transition: 0.3s;
     font-size: 17px;
     line-height:40px;
@@ -78,15 +76,13 @@ ul.ulTopNav {
     display: block;
 }
 
-
-
 li.ongletPage:hover:not(.active) {
     background-color: rgb(50, 44, 43);
 }
-ul.ulTopNav li a {
+ul.ulTopNav li {
     color: #FFFFFF;
 }
-ul.ulTopNav li.active a {
+ul.ulTopNav li.active {
     color: #FF8200;
 }
 
@@ -95,16 +91,10 @@ ul.ulTopNav li.active {
     height: 40px;
 }
 
-.ongletPage a {
-    padding: 20px 16px;
-}
-
 .icon {
     display: none;
     font-size: 2em;
 }
-
-
 .dropBtn {
     text-decoration: none;
     color: #f2f2f2;
@@ -116,9 +106,6 @@ ul.ulTopNav li.active {
     background-color: rgb(66,60,59);
     height: 1px;
 }
-
-
-
 
 @media screen and (max-width: 1080px) {
     ul.ulTopNav {
@@ -146,4 +133,6 @@ ul.ulTopNav li.active {
         display: none;
     }
 }
+
+/*------------- END MENU ------------- */
 
