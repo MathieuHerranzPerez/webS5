@@ -14,6 +14,7 @@ body {
     font-family: Roboto, Arial, sans-serif;
     margin: 0;
     padding: 0;
+    color: #2E2E2E;
 }
 
 a,a:hover,a:link,a:visited,a:active,a:focus{
@@ -38,7 +39,7 @@ hr {
     padding-left: 15%;
     padding-right: 15%;
     overflow: hidden;
-    background-color: rgb(66,60,59);
+    background-color: #2E2E2E;
     height: 100%;
 }
 
@@ -156,6 +157,10 @@ h1 {
 h3 {
     text-align: center;
     margin-bottom: 40px;
+    color: #2E2E2E;
+}
+h3.whiteShadow {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 1);
 }
 
 div.changeStyle {
@@ -207,4 +212,7 @@ textarea {
 
 input {
     margin-bottom: 40px;
+}
+.right {
+    float: right;
 }

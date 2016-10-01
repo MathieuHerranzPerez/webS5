@@ -10,10 +10,11 @@
         <?php
             displayMenu("cv");
         ?>
-
-
+        <div class="container">
+            <a href="download/CV_General_MathieuHerranzPerez.pdf">Mon Cv</a>
+        </div>
         <?php
-        displayFooter();
+            displayFooter();
         ?>
     </body>
 </html>
