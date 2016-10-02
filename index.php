@@ -3,7 +3,7 @@
 ?>
 <!doctype html>
     <?php
-        displayHeader("Accueil");
+        displayHeader("Mathieu HP Accueil");
     ?>
     <body onload="readStyleCookie()">
         <?php

@@ -4,7 +4,7 @@
 
 <!DOCTYPE html>
     <?php
-        displayHeader("Me contacter");
+        displayHeader("Mathieu HP Me contacter");
     ?>
     <body onload="readStyleCookie()">
         <?php
@@ -15,9 +15,9 @@
             <div class="form">
                 <form>
                     Nom:<br/>
-                    <input type="text" name="lastName"><br/>
+                    <input type="text" name="lastName" onChange="checkName()"><br/>
                     Prenom:<br/>
-                    <input type="text" name="firstName"><br/>
+                    <input type="text" name="firstName" onChange="checkName()"><br/>
                     Mail:<br/>
                     <input type="email" name="mail"><br/>
                     Date de naissance:<br/>

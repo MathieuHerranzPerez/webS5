@@ -44,6 +44,13 @@ function readStyleCookie() {
     }
 }
 
+function displayAnchor(id) {
+    if (window.pageYOffset > 120)
+        $(id).fadeIn();
+    else
+        $(id).fadeOut();
+}
+
 
 
 $(document).ready(function() {
@@ -59,4 +66,11 @@ $(document).ready(function() {
             $('.ulTopNav').css('display','block');
         }
     }
+    /* when you click on an anchor link */
+    $('.returnHLink').click(function(){
+        var id = $(this).attr("href");
+        $('html, body').animate({
+            scrollTop: $(id).offset().top
+        });
+    });
 });

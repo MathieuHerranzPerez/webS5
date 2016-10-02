@@ -24,6 +24,7 @@ a,a:hover,a:link,a:visited,a:active,a:focus{
 ul {
     padding: 0;
     margin: 0;
+    list-style-type: none;
 }
 hr {
     margin: 0;
@@ -68,13 +69,12 @@ span.maj {
     color: #FF8200;
 }
 ul.ulTopNav {
-    list-style-type: none;
     float: right;
     display: block;
 }
 
 li.ongletPage:hover:not(.active) {
-    background-color: rgb(50, 44, 43);
+    background-color: #4C4C4C;
 }
 ul.ulTopNav li a {
     color: #FFFFFF;
@@ -109,7 +109,6 @@ ul.ulTopNav li.active {
 }
 #menuSeparation {
     color: rgb(66,60,59);
-    background-color: rgb(66,60,59);
     height: 1px;
 }
 @media screen and (max-width: 1080px) {
@@ -142,7 +141,9 @@ ul.ulTopNav li.active {
 /*------------- FIN MENU ------------- */
 
 body {
-    background: url("../img/montagne2.jpg") no-repeat center fixed;
+    background: url("../img/montagne2little.jpg") no-repeat center fixed,
+                url("../img/montagne2Vlittle.jpg") no-repeat center fixed,
+                url("../img/montagne2.jpg") no-repeat center fixed;
     background-size: cover;
 }
 
@@ -170,7 +171,6 @@ div.changeStyle {
     height: 300px;
 }
 div.center {
-    padding: auto;
     height: 80%;
 }
 div.btnStyle {
@@ -185,12 +185,12 @@ div.btnStyle:hover {
     transform: scale(1.1);
 }
 div#btnStyle1 {
-    background: url("../img/montagne2.jpg") no-repeat center;
+    background: url("../img/montagne2little.jpg") no-repeat center;
     background-size: cover;
     margin-right: 20%;
 }
 div#btnStyle2 {
-    background: url("../img/montagne2.jpg") no-repeat center;
+    background: url("../img/montagne2little.jpg") no-repeat center;
     background-size: cover;
 }
 
@@ -199,6 +199,12 @@ div.container {
     margin-right: 15%;
     padding: 30px 15px;
     background-color: #FFFFFF;
+    min-width: 300px;
+}
+@media screen and (max-width: 600px) {
+    div.container {
+        margin: 0;
+    }
 }
 
 
@@ -218,3 +224,69 @@ input {
 }
 
 /* --- cv -----*/
+div.cv {
+    padding: 5%;
+}
+.tabulation {
+    margin-left: 30px;
+}
+table.center {
+    margin-right: auto;
+    margin-left: auto;
+}
+.thLeft {
+    text-align: right;
+}
+.thRight {
+    text-align: left;
+    font-weight: normal;
+    padding-left: 10%;
+}
+hr.separationCv {
+    margin-bottom: 2px;
+}
+.cv h3 {
+    margin-bottom : 0;
+    margin-top: 40px;
+}
+.cv table {
+    margin-top: 10px;
+}
+div.colorJ {
+    background-color: #FFDCB9;
+    padding: 5px;
+    overflow: hidden;
+}
+.blocP {
+    float: left;
+    width: 33.3333%;
+}
+div.line {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.returnH {
+    position: fixed;
+    right : 5%;
+    top: 70%;
+    display: none;
+}
+.btnAncre {
+    width: 30px;
+}
+
+
+
+
+/*--------- footer ---------*/
+.footer {
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 5px 15px;
+    background-color: #2E2E2E;
+    min-width: 300px;
+    color: #FFFFFF;
+    text-align: center;
+    cursor: default;
+    font-size: 10px;
+}
