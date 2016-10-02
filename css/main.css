@@ -169,6 +169,7 @@ div.changeStyle {
     margin-left: auto;
     width: 50%;
     height: 300px;
+    margin-bottom: 200px;
 }
 div.center {
     height: 80%;
@@ -200,6 +201,7 @@ div.container {
     padding: 30px 15px;
     background-color: #FFFFFF;
     min-width: 300px;
+    min-height: 785px;
 }
 @media screen and (max-width: 600px) {
     div.container {
