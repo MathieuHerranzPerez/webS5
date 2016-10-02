@@ -51,6 +51,39 @@ function displayAnchor(id) {
         $(id).fadeOut();
 }
 
+/* CONTACT */
+/**
+ * check if the name is composed only of letters
+ * @param field
+ * @returns {boolean}
+ */
+function checkName(field) {
+    console.log($(field).val());
+    var regex = new RegExp('[^A-Za-z]');
+    console.log(regex.test($(field).val()));
+    if($(field).val().length < 2 || $(field).val().length > 30 || regex.test($(field).val()))
+    {
+        highlight(field, true);
+        return false;
+    }
+    else
+    {
+        highlight(field, false);
+        return true;
+    }
+}
+
+function highlight(field, erreur) {
+    console.log(field);
+    console.log('là');
+    if(erreur)
+        $(field).css('border', '2px solid red')
+                .css('background-color', '#FFD5D4');
+    else
+        $(field).css('border', '2px solid green')
+                .css('background-color', '#CDFFCB');
+}
+
 
 
 $(document).ready(function() {

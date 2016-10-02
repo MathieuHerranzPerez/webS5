@@ -15,9 +15,9 @@
             <div class="form">
                 <form>
                     Nom:<br/>
-                    <input type="text" name="lastName" onChange="checkName()"><br/>
+                    <input id="inLastName" type="text" name="lastName" onChange="checkName('#inLastName')"><br/>
                     Prenom:<br/>
-                    <input type="text" name="firstName" onChange="checkName()"><br/>
+                    <input id="inFirstName" type="text" name="firstName" onChange="checkName('#inFirstName')"><br/>
                     Mail:<br/>
                     <input type="email" name="mail"><br/>
                     Date de naissance:<br/>
