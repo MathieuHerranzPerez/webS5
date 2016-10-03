@@ -60,7 +60,6 @@ function displayAnchor(id) {
 function checkName(field) {
     console.log($(field).val());
     var regex = new RegExp('[^A-Za-z]');
-    console.log(regex.test($(field).val()));
     if($(field).val().length < 2 || $(field).val().length > 30 || regex.test($(field).val()))
     {
         highlight(field, true);
@@ -71,6 +70,46 @@ function checkName(field) {
         highlight(field, false);
         return true;
     }
+}
+/**
+ * check if the mail seems "right"
+ * @param field
+ * @returns {boolean}
+ */
+function checkMail(field) {
+    var regex = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
+    console.log(regex.test($(field).val()));
+    if($(field).val().length < 5 || $(field).val().length > 50 || !regex.test($(field).val()))
+    {
+        highlight(field, true);
+        return false;
+    }
+    else
+    {
+        highlight(field, false);
+        return true;
+    }
+}
+
+/**
+ * check if the date is corrected
+ * @param field
+ * @returns {boolean}
+ */
+function checkBirth(field) {
+    var regex = /^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/;
+    console.log(regex.test($(field).val()));
+    if(!regex.test($(field).val()))
+    {
+        highlight(field, true);
+        return false;
+    }
+    else
+    {
+        highlight(field, false);
+        return true;
+    }
+
 }
 
 function highlight(field, erreur) {
