@@ -19,9 +19,9 @@
                     Prenom:<br/>
                     <input id="inFirstName" type="text" name="firstName" onChange="checkName('#inFirstName')"><br/>
                     Mail:<br/>
-                    <input type="email" name="mail"><br/>
+                    <input id="inMail" type="email" name="mail" onChange="checkMail('#inMail')"><br/>
                     Date de naissance:<br/>
-                    <input type="date" name="birth"><br/>
+                    <input id="inDate" type="text" name="birth" placeholder="jj/mm/aaaa" onChange="checkBirth('#inDate')"><br/>
                     Commentaires:<br/>
                     <textarea rows="4" cols="50"></textarea><br/>
                     <button class="right" type="submit">Envoyer</button>

@@ -1,0 +1,317 @@
+/** Polices supplémentaires **/
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Open sans';
+    src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #2E2E2E;
+}
+
+a,a:hover,a:link,a:visited,a:active,a:focus{
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+hr {
+    margin: 0;
+}
+
+
+/*--------------- MENU --------------- */
+
+.topNav {
+
+    margin: 0;
+    padding: 0;
+    padding-left: 15%;
+    padding-right: 15%;
+    overflow: hidden;
+    background-color: #2E2E2E;
+    height: 100%;
+}
+
+/* Float the list items side by side */
+.ongletPage {
+    float: left;
+}
+
+/* Style the links inside the list items */
+li.ongletPage{
+    transition: 0.3s;
+    font-size: 17px;
+    line-height:40px;
+    font-weight: bold;
+}
+
+#prenomNom{
+    font-size: 20px;
+    display: inline-block;
+    color: #f2f2f2;
+    text-decoration: none;
+    line-height: 80px;
+    cursor: default;
+}
+span.maj {
+    color: #FF8200;
+}
+ul.ulTopNav {
+    float: right;
+    display: block;
+}
+
+li.ongletPage:hover:not(.active) {
+    background-color: #4C4C4C;
+}
+ul.ulTopNav li a {
+    color: #FFFFFF;
+}
+ul.ulTopNav li.active a {
+    color: #FF8200;
+}
+
+ul.ulTopNav li.active {
+    background-color: #F8F8F8;
+    height: 100%;
+}
+
+.ongletPage a {
+    display: block;
+    padding: 20px 16px;
+    height: 100%;
+}
+
+.icon {
+    display: none;
+    font-size: 2em;
+}
+
+
+.dropBtn {
+    text-decoration: none;
+    color: #f2f2f2;
+    line-height: 68px;
+    float: right;
+}
+#menuSeparation {
+    color: rgb(66,60,59);
+    height: 1px;
+}
+@media screen and (max-width: 1080px) {
+    ul.ulTopNav {
+        display: none;
+        float: none;
+    }
+    ul.ulTopNav {
+        float: none;
+    }
+    .icon {
+        display: inline-block;
+    }
+    .topNav {
+        padding: 0 5%;
+    }
+    #menuSeparation {
+        display: block;
+    }
+    .ongletPage {
+        float: none;
+    }
+}
+@media screen and (min-width: 1081px) {
+    #menuSeparation {
+        display: none;
+    }
+}
+
+/*------------- FIN MENU ------------- */
+
+body {
+    background: url("../img/montagne2little.jpg") no-repeat center fixed,
+                url("../img/montagne2Vlittle.jpg") no-repeat center fixed,
+                url("../img/montagne2.jpg") no-repeat center fixed;
+    background-size: cover;
+}
+
+h1 {
+    color: #FF8200;
+    font-size: 60px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2E2E2E;
+}
+h3.whiteShadow {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 1);
+}
+
+div.changeStyle {
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+    height: 300px;
+    margin-bottom: 200px;
+}
+div.center {
+    height: 80%;
+}
+div.btnStyle {
+    width: 40%;
+    height: 80%;
+    float: left;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+}
+div.btnStyle:hover {
+    transform: scale(1.1);
+}
+div#btnStyle1 {
+    background: url("../img/montagne2little.jpg") no-repeat center;
+    background-size: cover;
+    margin-right: 20%;
+}
+div#btnStyle2 {
+    background: url("../img/montagne2little.jpg") no-repeat center;
+    background-size: cover;
+}
+
+div.container {
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 30px 15px;
+    background-color: #FFFFFF;
+    min-width: 300px;
+    min-height: 785px;
+}
+@media screen and (max-width: 600px) {
+    div.container {
+        margin: 0;
+    }
+    div.footer {
+        margin: 0;
+    }
+}
+
+
+/*------------ FORM --------------*/
+textarea {
+    max-height: 400px;
+    max-width: 100%;
+    min-height: 50px;
+    min-width: 10%;
+
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px #ddd inset;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 8px 0;
+    padding: 12px 20px;
+    width: 100%;
+}
+
+input {
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px #ddd inset;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 8px 0;
+    padding: 12px 20px;
+    width: 100%;
+}
+input:focus {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #FF8200;
+}
+.right {
+    float: right;
+}
+
+/* --- cv -----*/
+div.cv {
+    padding: 5%;
+}
+.tabulation {
+    margin-left: 30px;
+}
+table.center {
+    margin-right: auto;
+    margin-left: auto;
+}
+.thLeft {
+    text-align: right;
+}
+.thRight {
+    text-align: left;
+    font-weight: normal;
+    padding-left: 10%;
+}
+hr.separationCv {
+    margin-bottom: 2px;
+}
+.cv h3 {
+    margin-bottom : 0;
+    margin-top: 40px;
+}
+.cv table {
+    margin-top: 10px;
+}
+div.colorJ {
+    background-color: #FFDCB9;
+    padding: 5px;
+    overflow: hidden;
+}
+.blocP {
+    float: left;
+    width: 33.3333%;
+}
+div.line {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.returnH {
+    position: fixed;
+    right : 5%;
+    top: 70%;
+    display: none;
+}
+.btnAncre {
+    width: 30px;
+}
+
+
+
+
+/*--------- footer ---------*/
+.footer {
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 5px 15px;
+    background-color: #2E2E2E;
+    min-width: 300px;
+    color: #FFFFFF;
+    text-align: center;
+    cursor: default;
+    font-size: 10px;
+}
