@@ -91,7 +91,6 @@ ul.ulTopNav li.active {
 .ongletPage a {
     display: block;
     padding: 20px 16px;
-    width: 100%;
     height: 100%;
 }
 
@@ -207,15 +206,28 @@ div.container {
     div.container {
         margin: 0;
     }
+    div.footer {
+        margin: 0;
+    }
 }
 
 
 /*------------ FORM --------------*/
 textarea {
     max-height: 400px;
-    max-width: 700px;
+    max-width: 100%;
     min-height: 50px;
-    min-width: 200px;
+    min-width: 10%;
+
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px #ddd inset;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 8px 0;
+    padding: 12px 20px;
+    width: 100%;
 }
 
 input {
