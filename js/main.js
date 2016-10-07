@@ -123,6 +123,14 @@ function highlight(field, erreur) {
                 .css('background-color', '#CDFFCB');
 }
 
+/**
+ * display, with the function alert, param str
+ * @param str
+ */
+function displayAlert(str) {
+    alert(str);
+}
+
 
 
 $(document).ready(function() {

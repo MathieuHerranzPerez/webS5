@@ -24,7 +24,7 @@
                     <input id="inDate" type="text" name="birth" placeholder="jj/mm/aaaa" onChange="checkBirth('#inDate')"><br/>
                     Commentaires:<br/>
                     <textarea rows="4" cols="50"></textarea><br/>
-                    <button class="right" type="submit">Envoyer</button>
+                    <button class="right" type="submit" onClick="displayAlert('Ca ne fait rien !')">Envoyer</button>
 
                 </form>
             </div>
