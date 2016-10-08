@@ -18,15 +18,15 @@
                     <h2>Mathieu HERRANZ PEREZ</h2>
                     <p>Bât. K, av. JP Coste, rés. Le Bel Ormeau
                        13100 Aix-en-Provence</p>
-                    <strong>06 70 88 22 85<br/>
+                    <strong>+33 (0)6 70 88 22 85<br/>
                         mathieu.herranzperez@gmail.com<br/>
-                        <a href="https://github.com/MathieuHerranzPerez"><span class="maj">github</span></a><br/>
+                        <a href="https://github.com/MathieuHerranzPerez"><span class="maj">GitHub</span></a><br/>
                     </strong><br/>
                     20 ans<br/>
                     Nationalité française, Permis B
                 </div>
 
-                <h3><span class="maj">D</span>iplômes et formations</h3><hr class="separationCv"/>
+                <h3><span class="maj">D</span>iplômes et <span class="maj">F</span>ormations</h3><hr class="separationCv"/>
                 <table class="center">
                     <tr>
                         <th class="thLeft"><strong>2016</strong></th>
@@ -43,7 +43,7 @@
                 </table>
 
 
-                <h3><span class="maj">C</span>ompétences spécialisées</h3><hr class="separationCv"/>
+                <h3><span class="maj">C</span>ompétences <span class="maj">S</span>pécialisées</h3><hr class="separationCv"/>
                 <table class="center">
                     <tr>
                         <th class="thLeft">Programmation</th>
@@ -68,7 +68,7 @@
                 </table>
 
 
-                <h3><span class="maj">C</span>ompétences associées</h3><hr class="separationCv"/>
+                <h3><span class="maj">C</span>ompétences <span class="maj">A</span>ssociées</h3><hr class="separationCv"/>
                 <table class="center">
                     <tr>
                         <th class="thLeft">Gestion</th>
@@ -80,7 +80,7 @@
                     </tr>
                     <tr>
                         <th class="thLeft">Linguistique</th>
-                        <th class="thRight">Anglais niveau B2, Espagnol niveau A2</th>
+                        <th class="thRight">Anglais niveau intermediaire, Espagnol niveau académique</th>
                     </tr>
                     <tr>
                         <th class="thLeft">Mathématiques</th>
@@ -114,8 +114,9 @@
                 </p>
 
 
-                <h3><span class="maj">E</span>xpérience professionnelle</h3><hr class="separationCv"/>
-                <p><strong>Stage de dix semaines</strong>en entreprise pour la refonte du site web de Powersys.
+                <h3><span class="maj">E</span>xpérience <span class="maj">P</span>rofessionnelle</h3><hr class="separationCv"/>
+                <p><strong>Stage de dix semaines</strong> en entreprise.<br/>Web développeur, Le Puy Sainte Réparade, 04 avril
+                    au 10 Juin 2016 ; pour la refonte du site web de Powersys.
                     Site dynamique avec interface d'administration pour ajouter modifier et supprimer 90% du contenu.<br/>
                     <a href="http://powersys-solutions.com/wp-nvsite/"><span class="maj">Future site de Powersys</span></a>
                 </p>

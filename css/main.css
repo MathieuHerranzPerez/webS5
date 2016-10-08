@@ -106,10 +106,7 @@ ul.ulTopNav li.active {
     line-height: 68px;
     float: right;
 }
-#menuSeparation {
-    color: rgb(66,60,59);
-    height: 1px;
-}
+
 @media screen and (max-width: 1080px) {
     ul.ulTopNav {
         display: none;
@@ -124,17 +121,13 @@ ul.ulTopNav li.active {
     .topNav {
         padding: 0 5%;
     }
-    #menuSeparation {
-        display: block;
-    }
+
     .ongletPage {
         float: none;
     }
 }
 @media screen and (min-width: 1081px) {
-    #menuSeparation {
-        display: none;
-    }
+
 }
 
 /*------------- FIN MENU ------------- */
@@ -305,11 +298,10 @@ div.line {
 
 /*--------- footer ---------*/
 .footer {
-    margin-left: 15%;
-    margin-right: 15%;
+    margin: 0;
     padding: 5px 15px;
     background-color: #2E2E2E;
-    min-width: 300px;
+    width: 100%;
     color: #FFFFFF;
     text-align: center;
     cursor: default;

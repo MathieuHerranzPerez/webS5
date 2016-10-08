@@ -5,12 +5,13 @@
  */
 function setStyleCookies(value, name) {
     $('#css').attr('href', 'css/' + value);                     // change style
-    console.log('css/' + value);
 
     var today = new Date();
     var expires = new Date();
     expires.setTime(today.getTime() + (360*24*60*60*1000));     // 1 year
     document.cookie = name + "=" + encodeURIComponent(value) + ";expires=" + expires.toGMTString();
+
+    displayGlob(value);
 }
 
 /**
@@ -41,6 +42,43 @@ function readStyleCookie() {
     var style = getStyleCookie('style');
     if(style != null) {
         $('#css').attr('href', 'css/' + style);
+    }
+    displayGlob(style);
+}
+
+/**
+ * change the menu button when the style has been changed
+ * @param value
+ */
+function displayGlob(value) {
+    if(value == "style2.css") {
+        $('.dropBtn').replaceWith("<a class=\"dropBtn icon\" href=\"#\" onClick=\"displayMenu('1')\"></a>");
+    }
+    else {
+        $('.dropBtn').replaceWith("<a class=\"dropBtn icon\" href=\"#\" onClick=\"displayMenu('2')\">☰</a>");
+    }
+}
+
+function displayMenu(num) {
+    if(num == 2) {
+        $('.ulTopNav').slideToggle('medium');
+        console.log("là1");
+    }
+    else {
+        var theWidth = window.innerWidth;
+        if($('.ulTopNav').css('transform') == 'matrix(1, 0, 0, 1, 80, 0)' || $('.ulTopNav').css('transform') == 'matrix(1, 0, 0, 1, 20, 0)')
+        {
+            if(theWidth < 1024)
+                $('.ulTopNav').css({'transform' : 'translateX( -250px)'});
+            else
+                $('.ulTopNav').css({'transform' : 'translateX( -300px)'});
+        }
+        else {
+            if(theWidth < 1024)
+                $('.ulTopNav').css({'transform': 'translateX(20px)'});
+            else
+                $('.ulTopNav').css({'transform': 'translateX(80px)'});
+        }
     }
 }
 
@@ -136,16 +174,12 @@ function displayAlert(str) {
 $(document).ready(function() {
     readStyleCookie();
 
-    $('.dropBtn').click(function () {
-        $('.ulTopNav').slideToggle('medium');
-    })
-
     window.onresize = function() {
         var theWidth = window.innerWidth;
         if(theWidth > 1080) {
             $('.ulTopNav').css('display','block');
         }
-    }
+    };
     /* when you click on an anchor link */
     $('.returnHLink').click(function(){
         var id = $(this).attr("href");

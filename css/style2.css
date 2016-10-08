@@ -1,5 +1,10 @@
+@font-face {
+    font-family: 'forgotten futurist rg';
+    src: url('../fonts/forgotten%20futurist%20rg.ttf');
+}
+
 body {
-    font-family: Roboto, Arial, sans-serif;
+    font-family: 'forgotten futurist rg',Roboto, Arial, sans-serif;
     margin: 0;
     padding: 0;
     color: #2E2E2E;
@@ -19,19 +24,41 @@ h1 {
 
 /*--------------- MENU --------------- */
 nav#topNav {
-    background-color: #0CBA00;
+    /*background-color: #45BF55;*/
     float: left;
     height: 100%;
 }
+#prenomNom {
+    width: 100%;
+    float: left;
+    line-height: 80px;
+    cursor: default;
+}
 li.ongletPage {
     padding: 0 0;
+    background-image: url('../img/menuTestD.png');
+    background-size: cover;
+    height: 110px;
+    width: 245px;
 }
 .ongletPage a {
     display: block;
     padding: 20px 20px;
-    min-height: 100%;
     overflow: hidden;
     margin: 0;
+}
+.dropBtn {
+    background-image: url('../img/menuTestR.png');
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+    display: block;
+    float: left;
+}
+.ulTopNav {
+    transition: all 0.2s ease 0s;
+    transform: translateX(80px);
+    margin-top: 50px;
 }
 
 
@@ -61,4 +88,8 @@ div#btnStyle1 {
 div#btnStyle2 {
     background: url("../img/montagne2.jpg") no-repeat center;
     background-size: cover;
+}
+
+h1 {
+    text-align: center;
 }
