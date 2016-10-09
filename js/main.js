@@ -11,7 +11,7 @@ function setStyleCookies(value, name) {
     expires.setTime(today.getTime() + (360*24*60*60*1000));     // 1 year
     document.cookie = name + "=" + encodeURIComponent(value) + ";expires=" + expires.toGMTString();
 
-    displayGlob(value);
+    changeBtn(value);
 }
 
 /**
@@ -43,16 +43,12 @@ function readStyleCookie() {
     if(style != null) {
         $('#css').attr('href', 'css/' + style);
     }
-    displayGlob(style);
+    changeBtn(style);
 }
 
-/**
- * change the menu button when the style has been changed
- * @param value
- */
-function displayGlob(value) {
-    if(value == "style2.css") {
-        $('.dropBtn').replaceWith("<a class=\"dropBtn icon\" href=\"#\" onClick=\"displayMenu('1'), listenSong()\"></a>");
+function changeBtn(style) {
+    if(style == "style2.css") {
+        $('.dropBtn').replaceWith("<a class=\"dropBtn icon\" href=\"#\" onClick=\"displayMenu('1')\">☰</a>");
     }
     else {
         $('.dropBtn').replaceWith("<a class=\"dropBtn icon\" href=\"#\" onClick=\"displayMenu('2')\">☰</a>");
@@ -60,24 +56,27 @@ function displayGlob(value) {
 }
 
 function displayMenu(num) {
-    if(num == 2) {
+    if (num == 2) {
         $('.ulTopNav').slideToggle('medium');
     }
     else {
-        var theWidth = window.innerWidth;
-        if($('.ulTopNav').css('transform') == 'matrix(1, 0, 0, 1, 95, 0)' || $('.ulTopNav').css('transform') == 'matrix(1, 0, 0, 1, 60, 0)')
-        {
-            if(theWidth < 1024)
-                $('.ulTopNav').css({'transform' : 'translateX( -210px)'});
-            else
-                $('.ulTopNav').css({'transform' : 'translateX( -260px)'});
-        }
-        else {
-            if(theWidth < 1024)
-                $('.ulTopNav').css({'transform': 'translateX(60px)'});
-            else
-                $('.ulTopNav').css({'transform': 'translateX(95px)'});
-        }
+        $('#prenomNom').toggle(
+            function() {
+                $('.ulTopNav').animate({left: "100px"}, "slow");
+            },
+            function() {
+                $('.ulTopNav').animate({left: "0px"}, "slow");
+            }
+        );
+        $('.ulTopNav').toggle(
+            function() {
+                $('.ulTopNav').animate({left: "100px"}, "slow");
+            },
+            function() {
+                $('.ulTopNav').animate({left: "0px"}, "slow");
+            }
+        );
+
     }
 }
 
@@ -86,12 +85,6 @@ function displayAnchor(id) {
         $(id).fadeIn();
     else
         $(id).fadeOut();
-}
-
-function listenSong() {
-    soundManager.url = '../music/soundmanager/swf/';
-    soundManager.debugMode = true;
-    soundManager.play("premier_son","../music/tp.mp3");
 }
 
 /* CONTACT */

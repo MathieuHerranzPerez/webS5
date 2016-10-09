@@ -8,8 +8,9 @@ body {
     margin: 0;
     padding: 0;
     color: #9FF2F2;
-    background: url('../img/space.jpg');
-    background-size: cover;
+    min-height: 100%;
+    /*background: url('../img/space.jpg');
+    background-size: cover;*/
 }
 a,a:hover,a:link,a:visited,a:active,a:focus{
     text-decoration: none;
@@ -25,9 +26,8 @@ h1 {
     margin: 0;
 }
 
-/*--------------- MENU --------------- */
+/*--------------- MENU --------------- *//*
 nav#topNav {
-    /*background-color: #45BF55;*/
     float: left;
     height: 100%;
 }
@@ -91,12 +91,15 @@ li.ongletPage {
     }
 }
 
-
-/*-------------- FIN MENU ------------ */
+*/
+/*-------------- FIN MENU ------------ *//*
+div#containerHome {
+    float: left;
+    width: 60%;
+}
 div.changeStyle {
     margin-right: auto;
     margin-left: auto;
-    width: 50%;
     height: 300px;
 }
 div.center {
@@ -122,4 +125,85 @@ div#btnStyle2 {
 
 h1 {
     text-align: center;
+}*/
+
+
+/*--------------- MENU --------------*/
+nav#topNav {
+    float: left;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0) linear-gradient(135deg, #030633 0px, #3F729B 100%) repeat scroll 0 0;
+    display: block;
+}
+
+#prenomNom {
+    line-height: 100px;
+    cursor: default;
+    color: #9FF2F2;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    padding: 0 12px 0 30px;
+    overflow: hidden;
+}
+.dropBtn {
+    color: #9FF2F2;
+    margin: 5px;
+    font-size: 20px;
+    float: right;
+}
+.dropBtn:hover {
+    background-color: #454878;
+}
+li.ongletPage {
+    padding: 0 0;
+    text-align: center;
+    vertical-align: center;
+    transition: background 0.1s;
+}
+.ongletPage a {
+    display: block;
+    padding: 20px 20px;
+    overflow: hidden;
+    margin: 0;
+    color: #9FF2F2;
+    text-align: center;
+}
+li.ongletPage:hover {
+    background-color: #454878;
+}
+.active {
+    background-color: #1C1D30;
+}
+/*------------- FIN MENU -------------*/
+div.changeStyle {
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+    height: 300px;
+    margin-bottom: 200px;
+}
+div.center {
+    height: 80%;
+}
+div.btnStyle {
+    width: 40%;
+    height: 80%;
+    float: left;
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+}
+div#btnStyle1:hover {
+    background: url("../img/montagne2little.jpg") no-repeat center; /*todo changer cette image*/
+    background-size: cover;
+}
+
+div.btnStyle:hover {
+    transform: scale(1.1);
+}
+
+div#btnStyle1 {
+    background: url("../img/montagne2little.jpg") no-repeat center;
+    background-size: cover;
+    margin-right: 20%;
 }

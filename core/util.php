@@ -7,7 +7,7 @@
     function displayMenu($pageActive) {
         echo '<nav class="topNav" id="topNav">
             <a href="./index.php" id="prenomNom"><span class="maj">M</span>athieu HERRANZ PEREZ</a>
-            <a class="dropBtn icon" href="#">☰</a>
+            <a class="dropBtn" href="#">☰</a>
             <ul class="ulTopNav">
                 <li class="ongletPage' . (($pageActive == "index") ? ' active' : '') . '"><a href="index.php" id="home">Accueil</a></li>
                 <li class="ongletPage' . (($pageActive == "cv") ? ' active' : '') . '"><a href="cv.php" id="cv">CV en ligne</a></li>
