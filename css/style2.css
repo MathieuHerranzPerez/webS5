@@ -15,6 +15,7 @@ a,a:hover,a:link,a:visited,a:active,a:focus{
 ul {
     margin: 0;
     list-style-type: none;
+    padding: 0;
 }
 
 
@@ -31,8 +32,15 @@ nav#topNav {
 #prenomNom {
     width: 100%;
     float: left;
-    line-height: 80px;
+    line-height: 100px;
     cursor: default;
+    background: url('../img/nomTest.png');
+    background-size: cover;
+    color: #9FF2F2;
+    font-weight: bold;
+    text-align: center;
+
+    margin-bottom: 40px;
 }
 li.ongletPage {
     padding: 0 0;
@@ -40,25 +48,42 @@ li.ongletPage {
     background-size: cover;
     height: 110px;
     width: 245px;
+    overflow: hidden;
+
+    text-align: center;
+    vertical-align: center;
 }
 .ongletPage a {
     display: block;
-    padding: 20px 20px;
+    padding: 45px 20px;
     overflow: hidden;
     margin: 0;
+    color: #9FF2F2;
+    text-align: center;
 }
 .dropBtn {
-    background-image: url('../img/menuTestR.png');
+    background-image: url('../img/menuTestR2.png');
     background-size: cover;
     height: 100px;
     width: 100px;
     display: block;
     float: left;
+    position: absolute;
+    top: 140px;
+
+    transition: all 0.6s ease 0s;
+}
+.dropBtn:hover {
+    transform: rotate(360deg);
 }
 .ulTopNav {
-    transition: all 0.2s ease 0s;
-    transform: translateX(80px);
-    margin-top: 50px;
+    transition: all 0.6s ease 0s;
+    transform: translateX(95px);
+}
+@media screen and (max-width: 1080px) {
+    .ulTopNav {
+        transform: translateX(60px);
+    }
 }
 
 

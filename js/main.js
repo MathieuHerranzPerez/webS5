@@ -52,7 +52,7 @@ function readStyleCookie() {
  */
 function displayGlob(value) {
     if(value == "style2.css") {
-        $('.dropBtn').replaceWith("<a class=\"dropBtn icon\" href=\"#\" onClick=\"displayMenu('1')\"></a>");
+        $('.dropBtn').replaceWith("<a class=\"dropBtn icon\" href=\"#\" onClick=\"displayMenu('1'), listenSong()\"></a>");
     }
     else {
         $('.dropBtn').replaceWith("<a class=\"dropBtn icon\" href=\"#\" onClick=\"displayMenu('2')\">☰</a>");
@@ -66,18 +66,18 @@ function displayMenu(num) {
     }
     else {
         var theWidth = window.innerWidth;
-        if($('.ulTopNav').css('transform') == 'matrix(1, 0, 0, 1, 80, 0)' || $('.ulTopNav').css('transform') == 'matrix(1, 0, 0, 1, 20, 0)')
+        if($('.ulTopNav').css('transform') == 'matrix(1, 0, 0, 1, 95, 0)' || $('.ulTopNav').css('transform') == 'matrix(1, 0, 0, 1, 60, 0)')
         {
             if(theWidth < 1024)
-                $('.ulTopNav').css({'transform' : 'translateX( -250px)'});
+                $('.ulTopNav').css({'transform' : 'translateX( -210px)'});
             else
-                $('.ulTopNav').css({'transform' : 'translateX( -300px)'});
+                $('.ulTopNav').css({'transform' : 'translateX( -260px)'});
         }
         else {
             if(theWidth < 1024)
-                $('.ulTopNav').css({'transform': 'translateX(20px)'});
+                $('.ulTopNav').css({'transform': 'translateX(60px)'});
             else
-                $('.ulTopNav').css({'transform': 'translateX(80px)'});
+                $('.ulTopNav').css({'transform': 'translateX(95px)'});
         }
     }
 }
@@ -87,6 +87,12 @@ function displayAnchor(id) {
         $(id).fadeIn();
     else
         $(id).fadeOut();
+}
+
+function listenSong() {
+    soundManager.url = '../music/soundmanager/swf/';
+    soundManager.debugMode = true;
+    soundManager.play("premier_son","../music/tp.mp3");
 }
 
 /* CONTACT */
