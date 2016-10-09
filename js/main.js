@@ -62,7 +62,6 @@ function displayGlob(value) {
 function displayMenu(num) {
     if(num == 2) {
         $('.ulTopNav').slideToggle('medium');
-        console.log("là1");
     }
     else {
         var theWidth = window.innerWidth;
@@ -157,8 +156,6 @@ function checkBirth(field) {
 }
 
 function highlight(field, erreur) {
-    console.log(field);
-    console.log('là');
     if(erreur)
         $(field).css('border', '2px solid red')
                 .css('background-color', '#FFD5D4');
