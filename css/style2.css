@@ -7,10 +7,8 @@ body {
     font-family: 'forgotten futurist rg',Roboto, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #9FF2F2;
+    color: #3F729B;
     min-height: 100%;
-    /*background: url('../img/space.jpg');
-    background-size: cover;*/
 }
 a,a:hover,a:link,a:visited,a:active,a:focus{
     text-decoration: none;
@@ -131,9 +129,11 @@ h1 {
 /*--------------- MENU --------------*/
 nav#topNav {
     float: left;
-    min-height: 100vh;
+    height: 100%;
     background: rgba(0, 0, 0, 0) linear-gradient(135deg, #030633 0px, #3F729B 100%) repeat scroll 0 0;
     display: block;
+    position: fixed;
+    color: #9FF2F2;
 }
 
 #prenomNom {
@@ -176,6 +176,22 @@ li.ongletPage:hover {
     background-color: #1C1D30;
 }
 /*------------- FIN MENU -------------*/
+#containerHome {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+h1 {
+    text-align: center;
+    padding-top: 20px;
+}
+.whiteShadow{
+    text-align: center;
+}
+
+.container {
+    margin-left: 224px;
+    transition: all 0.6s ease 0s;
+}
 div.changeStyle {
     margin-right: auto;
     margin-left: auto;
@@ -199,11 +215,17 @@ div#btnStyle1:hover {
 }
 
 div.btnStyle:hover {
-    transform: scale(1.1);
+    transform: scale(0.98);
 }
 
 div#btnStyle1 {
     background: url("../img/montagne2little.jpg") no-repeat center;
     background-size: cover;
     margin-right: 20%;
+}
+
+
+
+.footer {
+    text-align: center;
 }

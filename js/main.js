@@ -1,3 +1,4 @@
+var styleCss;
 /**
  * change the style and create a cookie
  * @param value
@@ -5,7 +6,7 @@
  */
 function setStyleCookies(value, name) {
     $('#css').attr('href', 'css/' + value);                     // change style
-
+    styleCss = value;
     var today = new Date();
     var expires = new Date();
     expires.setTime(today.getTime() + (360*24*60*60*1000));     // 1 year
@@ -40,6 +41,7 @@ function getStyleCookie(name) {
  */
 function readStyleCookie() {
     var style = getStyleCookie('style');
+    styleCss = style;
     if(style != null) {
         $('#css').attr('href', 'css/' + style);
     }
@@ -48,7 +50,7 @@ function readStyleCookie() {
 
 function changeBtn(style) {
     if(style == "style2.css") {
-        $('.dropBtn').replaceWith("<a class=\"dropBtn icon\" href=\"#\" onClick=\"displayMenu('1')\">☰</a>");
+        $('.dropBtn').replaceWith("<a class=\"dropBtn icon\" href=\"#\" onClick=\"displayMenu('1'), reduceMargin()\">☰</a>");
     }
     else {
         $('.dropBtn').replaceWith("<a class=\"dropBtn icon\" href=\"#\" onClick=\"displayMenu('2')\">☰</a>");
@@ -78,6 +80,13 @@ function displayMenu(num) {
         );
 
     }
+}
+function reduceMargin() {
+    console.log($('.container').css('margin-left'));
+    if($('.container').css('margin-left') == '224px')
+        $('.container').css('margin-left', '28px');
+    else
+        $('.container').css('margin-left', '224px');
 }
 
 function displayAnchor(id) {
@@ -172,7 +181,7 @@ $(document).ready(function() {
 
     window.onresize = function() {
         var theWidth = window.innerWidth;
-        if(theWidth > 1080) {
+        if(theWidth > 1080 && styleCss == "main.css") {
             $('.ulTopNav').css('display','block');
         }
     };

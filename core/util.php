@@ -49,7 +49,6 @@
                       <meta name="viewport" content="width=device-width, initial-scale=1">
                       <link rel="stylesheet" href="css/main.css" id="css">
                       <link rel="icon" type="image/png" href="../img/orange.png" />
-                      <script type="text/javascript" src="../music/soundmanager/script/soundmanager2.js"></script>
                   </head>';
     }
 
