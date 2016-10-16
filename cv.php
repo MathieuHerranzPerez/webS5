@@ -10,6 +10,7 @@
         <?php
             displayMenu("cv");
         ?>
+        <div id="ancre"></div>
         <div class="container">
             <div class="cv">
                 <a href="download/CV_General_MathieuHerranzPerez.pdf"><span class="maj">Mon Cv</span></a>
@@ -169,7 +170,7 @@
             </div>
         </div>
         <div class="returnH">
-            <a class="returnHLink" href="#topNav">
+            <a class="returnHLink" href="#ancre">
                 <img class="btnAncre" src="./img/fleche.png" alt="retourner en haut">
             </a>
         </div>

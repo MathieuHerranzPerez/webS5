@@ -83,10 +83,10 @@ function displayMenu(num) {
 }
 function reduceMargin() {
     console.log($('.container').css('margin-left'));
-    if($('.container').css('margin-left') == '224px')
+    if($('.container').css('margin-left') == '290px')
         $('.container').css('margin-left', '28px');
     else
-        $('.container').css('margin-left', '224px');
+        $('.container').css('margin-left', '290px');
 }
 
 function displayAnchor(id) {

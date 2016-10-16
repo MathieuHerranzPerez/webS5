@@ -242,7 +242,7 @@ input:focus {
     float: right;
 }
 
-/* --- cv -----*/
+/* ----------- CV -------------*/
 div.cv {
     padding: 5%;
 }
@@ -294,7 +294,19 @@ div.line {
     width: 30px;
 }
 
+/*------------- FIN CV ---------------*/
 
+/*----------- QUI SUIS JE ------------*/
+
+.tableWhoAmI {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 15px;
+}
+.logo {
+    height: 50px;
+}
+/* ------- FIN QuI SUIS JE -----------*/
 
 
 /*--------- footer ---------*/
