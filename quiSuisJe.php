@@ -12,9 +12,8 @@
         <div class="container">
             <p>
                 Bonjour,<br/>
-                Je suis né à <a href="https://www.google.fr/maps/place/Clamart/@48.7553892,
-                2.2006278,10.49z/data=!4m5!3m4!1s0x47e67a150fecd221:0x40b82c3688b3e40!8m2!3d48.799815
-                !4d2.257289" target="_blank"><span class="maj">Clamart (92)</span></a> en janvier 1996. J'ai un super frère,
+                Je suis né à <a href="https://www.google.fr/maps/place/Clamart/@48.7553892,2.2006278,10.49z/data=!4m5!3m4!1s0x47e67a150fecd221:0x40b82c3688b3e40!8m2!3d48.799815!4d2.257289" target="_blank">
+                <span class="maj">Clamart (92)</span></a> en janvier 1996. J'ai un super frère,
                 Cédric, né juste avant moi.
             </p>
             <table class="tableWhoAmI">

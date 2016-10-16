@@ -1,8 +1,6 @@
 @font-face {
-    /*font-family: 'forgotten futurist rg';
-    src: url('../fonts/forgotten%20futurist%20rg.ttf');*/
-    font-family: 'Future-Earth';
-    src: url('../fonts/Future-Earth.ttf');
+    font-family: 'forgotten futurist rg';
+    src: url('../fonts/forgotten%20futurist%20rg.ttf');
 }
 
 body {
