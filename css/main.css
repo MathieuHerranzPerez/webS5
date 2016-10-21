@@ -137,6 +137,7 @@ body {
                 url("../img/montagne2Vlittle.jpg") no-repeat center fixed,
                 url("../img/montagne2.jpg") no-repeat center fixed;
     background-size: cover;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -178,12 +179,12 @@ div.btnStyle:hover {
     transform: scale(1.1);
 }
 div#btnStyle1 {
-    background: url("../img/montagne2little.jpg") no-repeat center;
+    background: url("../img/style1.jpg") no-repeat center;
     background-size: cover;
     margin-right: 20%;
 }
 div#btnStyle2 {
-    background: url("../img/montagne2little.jpg") no-repeat center;
+    background: url("../img/style12.jpg") no-repeat center;
     background-size: cover;
 }
 
@@ -241,7 +242,7 @@ input:focus {
     float: right;
 }
 
-/* --- cv -----*/
+/* ----------- CV -------------*/
 div.cv {
     padding: 5%;
 }
@@ -293,7 +294,19 @@ div.line {
     width: 30px;
 }
 
+/*------------- FIN CV ---------------*/
 
+/*----------- QUI SUIS JE ------------*/
+
+.tableWhoAmI {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 15px;
+}
+.logo {
+    height: 50px;
+}
+/* ------- FIN QuI SUIS JE -----------*/
 
 
 /*--------- footer ---------*/

@@ -7,31 +7,16 @@
     function displayMenu($pageActive) {
         echo '<nav class="topNav" id="topNav">
             <a href="./index.php" id="prenomNom"><span class="maj">M</span>athieu HERRANZ PEREZ</a>
-            <a class="dropBtn icon" href="#">☰</a>
+            <a class="dropBtn" href="#">☰</a>
             <ul class="ulTopNav">
                 <li class="ongletPage' . (($pageActive == "index") ? ' active' : '') . '"><a href="index.php" id="home">Accueil</a></li>
                 <li class="ongletPage' . (($pageActive == "cv") ? ' active' : '') . '"><a href="cv.php" id="cv">CV en ligne</a></li>
-                <li class="ongletPage'  . (($pageActive == "download") ? ' active' : '') . '"><a href="download.php" id="projects">Mes projets</a></li>
+                <li class="ongletPage'  . (($pageActive == "quiSuisJe") ? ' active' : '') . '"><a href="quiSuisJe.php" id="projects">Qui suis-je ?</a></li>
                 <li class="ongletPage' . (($pageActive == "contact") ? ' active' : '') . '"><a href="contact.php" id="contact">Me contacter</a></li>
-
+                <li class="ongletPage' . (($pageActive == "liens") ? ' active' : '') . '"><a href="liens.php" id="tp">Liens</a></li>
             </ul>
         </nav>';
     }
-
-/*function displayMenu($pageActive) {
-    echo '<nav class="topNav">
-            <a href="./index.php" id="prenomNom"><span class="maj">M</span>athieu HERRANZ PEREZ</a>
-            <a class="dropBtn icon" href="#">☰</a>
-            <hr id="menuSeparation" />
-            <ul class="ulTopNav">
-                <li class="ongletPage' . (($pageActive == "index") ? ' active' : '') . '"><a href="index.php" id="home">Accueil</a></li>
-                <li class="ongletPage' . (($pageActive == "cv") ? ' active' : '') . '"><a href="cv.php" id="cv">CV en ligne</a></li>
-                <li class="ongletPage'  . (($pageActive == "download") ? ' active' : '') . '"><a href="download.php" id="projects">Mes projets</a></li>
-                <li class="ongletPage' . (($pageActive == "contact") ? ' active' : '') . '"><a href="contact.php" id="contact">Me contacter</a></li>
-
-            </ul>
-        </nav>';
-}*/
 
 /**
  * display the header with the title
@@ -49,7 +34,6 @@
                       <meta name="viewport" content="width=device-width, initial-scale=1">
                       <link rel="stylesheet" href="css/main.css" id="css">
                       <link rel="icon" type="image/png" href="../img/orange.png" />
-                      <script type="text/javascript" src="../music/soundmanager/script/soundmanager2.js"></script>
                   </head>';
     }
 

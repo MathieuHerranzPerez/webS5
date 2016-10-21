@@ -1,3 +1,4 @@
+var styleCss;
 /**
  * change the style and create a cookie
  * @param value
@@ -5,13 +6,13 @@
  */
 function setStyleCookies(value, name) {
     $('#css').attr('href', 'css/' + value);                     // change style
-
+    styleCss = value;
     var today = new Date();
     var expires = new Date();
     expires.setTime(today.getTime() + (360*24*60*60*1000));     // 1 year
     document.cookie = name + "=" + encodeURIComponent(value) + ";expires=" + expires.toGMTString();
 
-    displayGlob(value);
+    changeBtn(value);
 }
 
 /**
@@ -40,19 +41,16 @@ function getStyleCookie(name) {
  */
 function readStyleCookie() {
     var style = getStyleCookie('style');
+    styleCss = style;
     if(style != null) {
         $('#css').attr('href', 'css/' + style);
     }
-    displayGlob(style);
+    changeBtn(style);
 }
 
-/**
- * change the menu button when the style has been changed
- * @param value
- */
-function displayGlob(value) {
-    if(value == "style2.css") {
-        $('.dropBtn').replaceWith("<a class=\"dropBtn icon\" href=\"#\" onClick=\"displayMenu('1'), listenSong()\"></a>");
+function changeBtn(style) {
+    if(style == "style2.css") {
+        $('.dropBtn').replaceWith("<a class=\"dropBtn icon\" href=\"#\" onClick=\"displayMenu('1'), reduceMargin()\">☰</a>");
     }
     else {
         $('.dropBtn').replaceWith("<a class=\"dropBtn icon\" href=\"#\" onClick=\"displayMenu('2')\">☰</a>");
@@ -60,26 +58,35 @@ function displayGlob(value) {
 }
 
 function displayMenu(num) {
-    if(num == 2) {
+    if (num == 2) {
         $('.ulTopNav').slideToggle('medium');
-        console.log("là1");
     }
     else {
-        var theWidth = window.innerWidth;
-        if($('.ulTopNav').css('transform') == 'matrix(1, 0, 0, 1, 95, 0)' || $('.ulTopNav').css('transform') == 'matrix(1, 0, 0, 1, 60, 0)')
-        {
-            if(theWidth < 1024)
-                $('.ulTopNav').css({'transform' : 'translateX( -210px)'});
-            else
-                $('.ulTopNav').css({'transform' : 'translateX( -260px)'});
-        }
-        else {
-            if(theWidth < 1024)
-                $('.ulTopNav').css({'transform': 'translateX(60px)'});
-            else
-                $('.ulTopNav').css({'transform': 'translateX(95px)'});
-        }
+        $('#prenomNom').toggle(
+            function() {
+                $('.ulTopNav').animate({left: "100px"}, "slow");
+            },
+            function() {
+                $('.ulTopNav').animate({left: "0px"}, "slow");
+            }
+        );
+        $('.ulTopNav').toggle(
+            function() {
+                $('.ulTopNav').animate({left: "100px"}, "slow");
+            },
+            function() {
+                $('.ulTopNav').animate({left: "0px"}, "slow");
+            }
+        );
+
     }
+}
+function reduceMargin() {
+    console.log($('.container').css('margin-left'));
+    if($('.container').css('margin-left') == '290px')
+        $('.container').css('margin-left', '28px');
+    else
+        $('.container').css('margin-left', '290px');
 }
 
 function displayAnchor(id) {
@@ -87,12 +94,6 @@ function displayAnchor(id) {
         $(id).fadeIn();
     else
         $(id).fadeOut();
-}
-
-function listenSong() {
-    soundManager.url = '../music/soundmanager/swf/';
-    soundManager.debugMode = true;
-    soundManager.play("premier_son","../music/tp.mp3");
 }
 
 /* CONTACT */
@@ -157,8 +158,6 @@ function checkBirth(field) {
 }
 
 function highlight(field, erreur) {
-    console.log(field);
-    console.log('là');
     if(erreur)
         $(field).css('border', '2px solid red')
                 .css('background-color', '#FFD5D4');
@@ -182,7 +181,7 @@ $(document).ready(function() {
 
     window.onresize = function() {
         var theWidth = window.innerWidth;
-        if(theWidth > 1080) {
+        if(theWidth > 1080 && styleCss == "main.css") {
             $('.ulTopNav').css('display','block');
         }
     };

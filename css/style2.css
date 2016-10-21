@@ -7,25 +7,32 @@ body {
     font-family: 'forgotten futurist rg',Roboto, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #2E2E2E;
+    color: #575959;
+    min-height: 100%;
 }
 a,a:hover,a:link,a:visited,a:active,a:focus{
     text-decoration: none;
+    color: #6F05A8;
 }
 ul {
     margin: 0;
     list-style-type: none;
     padding: 0;
 }
-
+p{
+    margin: 0;
+    padding: 10px 0;
+}
 
 h1 {
     margin: 0;
 }
+h1, h2, h2, h3, h4, h5 {
+    color: #3F729B;
+}
 
-/*--------------- MENU --------------- */
+/*--------------- MENU --------------- *//*
 nav#topNav {
-    /*background-color: #45BF55;*/
     float: left;
     height: 100%;
 }
@@ -61,6 +68,9 @@ li.ongletPage {
     color: #9FF2F2;
     text-align: center;
 }
+.ongletPage a:hover {
+    color: #FFFFFF;
+}
 .dropBtn {
     background-image: url('../img/menuTestR2.png');
     background-size: cover;
@@ -86,12 +96,15 @@ li.ongletPage {
     }
 }
 
-
-/*-------------- FIN MENU ------------ */
+*/
+/*-------------- FIN MENU ------------ *//*
+div#containerHome {
+    float: left;
+    width: 60%;
+}
 div.changeStyle {
     margin-right: auto;
     margin-left: auto;
-    width: 50%;
     height: 300px;
 }
 div.center {
@@ -117,4 +130,221 @@ div#btnStyle2 {
 
 h1 {
     text-align: center;
+}*/
+
+
+/*--------------- MENU --------------*/
+nav#topNav {
+    float: left;
+    height: 100%;
+    background: rgba(0, 0, 0, 0) linear-gradient(135deg, #030633 0px, #3F729B 100%) repeat scroll 0 0;
+    display: block;
+    position: fixed;
+    color: #9FF2F2;
+}
+
+#prenomNom {
+    line-height: 100px;
+    cursor: default;
+    color: #9FF2F2;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    padding: 0 12px 0 30px;
+    overflow: hidden;
+}
+.dropBtn {
+    color: #9FF2F2;
+    margin: 5px;
+    font-size: 20px;
+    float: right;
+}
+.dropBtn:hover {
+    background-color: #454878;
+}
+li.ongletPage {
+    padding: 0 0;
+    text-align: center;
+    vertical-align: center;
+    transition: background 0.1s;
+}
+.ongletPage a {
+    display: block;
+    padding: 20px 20px;
+    overflow: hidden;
+    margin: 0;
+    color: #9FF2F2;
+    text-align: center;
+}
+li.ongletPage:hover {
+    background-color: #454878;
+}
+.active {
+    background-color: #1C1D30;
+}
+/*------------- FIN MENU -------------*/
+#containerHome {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+h1 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.whiteShadow{
+    text-align: center;
+}
+
+.container {
+    margin-left: 290px;
+    transition: all 0.6s ease 0s;
+    margin-right: 5%;
+}
+div.changeStyle {
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+    height: 300px;
+    margin-bottom: 200px;
+}
+div.center {
+    height: 80%;
+    margin-top: 50px;
+}
+div.btnStyle {
+    width: 40%;
+    height: 80%;
+    float: left;
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+}
+
+
+div.btnStyle:hover {
+    transform: scale(0.98);
+}
+
+div#btnStyle1 {
+    background: url("../img/style1.jpg") no-repeat center;
+    background-size: cover;
+    margin-right: 20%;
+}
+div#btnStyle1:hover {
+    background: url("../img/style11.jpg") no-repeat center;
+    background-size: cover;
+}
+
+div#btnStyle2 {
+    background: url("../img/style12.jpg") no-repeat center;
+    background-size: cover;
+}
+div#btnStyle2:hover {
+    background: url("../img/style122.jpg") no-repeat center;
+    background-size: cover;
+}
+
+/*------------- CV -------------*/
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right,
+    rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+h3 {
+    margin-bottom: 0px;
+}
+.thLeft {
+    text-align: right;
+}
+.thRight {
+    text-align: left;
+    font-weight: normal;
+    padding-left: 10%;
+}
+
+.returnH {
+    position: fixed;
+    right : 5%;
+    top: 70%;
+    display: none;
+}
+.btnAncre {
+    width: 30px;
+}
+
+.colorJ {
+    background-color: #9FF2F2;
+}
+
+
+/* ------------ FIN CV ----------*/
+/* ----------- CONTACT ----------*/
+.form {
+    padding-top: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+textarea {
+    max-height: 400px;
+    max-width: 100%;
+    min-height: 50px;
+    min-width: 10%;
+
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px #ddd inset;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 8px 0;
+    padding: 12px 20px;
+    width: 70%;
+}
+
+input {
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px #ddd inset;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 8px 0;
+    padding: 12px 20px;
+    width: 70%;
+}
+input:focus {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #6F05A8;
+}
+.btnSubmit {
+    padding: 6px 0;
+    background: #3F729B;
+    color: #FFFFFF;
+    border-radius: 2px;
+    width: 100px;
+    border: none;
+    cursor: pointer;
+}
+.btnSubmit:hover {
+    background: #6F05A8;
+}
+.right {
+    margin-right: 30%;
+    float: right;
+}
+
+/*------------QUI SUIS JE------------*/
+
+.logo {
+    height: 30px;
+}
+
+/*----------FIN QUI SUIS JE----------*/
+
+/* ---------- FIN CONTACT -----------*/
+
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
 }
