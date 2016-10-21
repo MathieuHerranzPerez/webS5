@@ -13,7 +13,7 @@
                 <li class="ongletPage' . (($pageActive == "cv") ? ' active' : '') . '"><a href="cv.php" id="cv">CV en ligne</a></li>
                 <li class="ongletPage'  . (($pageActive == "quiSuisJe") ? ' active' : '') . '"><a href="quiSuisJe.php" id="projects">Qui suis-je ?</a></li>
                 <li class="ongletPage' . (($pageActive == "contact") ? ' active' : '') . '"><a href="contact.php" id="contact">Me contacter</a></li>
-                <li class="ongletPage' . (($pageActive == "tp") ? ' active' : '') . '"><a href="tp.php" id="tp">Tp</a></li>
+                <li class="ongletPage' . (($pageActive == "liens") ? ' active' : '') . '"><a href="liens.php" id="tp">Liens</a></li>
             </ul>
         </nav>';
     }

@@ -1,7 +1,6 @@
 <?php
-    require_once("./core/util.php");
 ?>
-    <!doctype html>
+<!doctype html>
 <head>
     <meta charset="utf-8">
     <title>TP</title>
@@ -20,6 +19,6 @@
     <div class="divTP rightDiv">
     </div>
     <div class="divTP bottomDiv">
-    </div>
+</div>
 
 </body>

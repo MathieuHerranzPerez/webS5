@@ -1,11 +1,12 @@
 var styleCss;
 /**
- * change the style and create a cookie
- * @param value
- * @param name
+ * changes the style and creates a cookie
+ * @param value value of the cookie
+ * @param name name of the cookie
  */
 function setStyleCookies(value, name) {
     $('#css').attr('href', 'css/' + value);                     // change style
+
     styleCss = value;
     var today = new Date();
     var expires = new Date();
@@ -17,7 +18,7 @@ function setStyleCookies(value, name) {
 
 /**
  * read the cookie and return its value
- * @param name
+ * @param name name of the cookie we have to find
  * @returns {*}
  */
 function getStyleCookie(name) {
@@ -37,7 +38,7 @@ function getStyleCookie(name) {
 }
 
 /**
- * look if there is already a cookie and change the style
+ * looks if there is already a cookie and changes the style
  */
 function readStyleCookie() {
     var style = getStyleCookie('style');
@@ -48,6 +49,10 @@ function readStyleCookie() {
     changeBtn(style);
 }
 
+/**
+ * Changes the attribute onClick of the drop button when the style has changed
+ * @param style name of the current style
+ */
 function changeBtn(style) {
     if(style == "style2.css") {
         $('.dropBtn').replaceWith("<a class=\"dropBtn icon\" href=\"#\" onClick=\"displayMenu('1'), reduceMargin()\">☰</a>");
@@ -57,6 +62,10 @@ function changeBtn(style) {
     }
 }
 
+/**
+ * displays the menu, used when someone has just clicked on the drop button
+ * @param num
+ */
 function displayMenu(num) {
     if (num == 2) {
         $('.ulTopNav').slideToggle('medium');
@@ -78,9 +87,12 @@ function displayMenu(num) {
                 $('.ulTopNav').animate({left: "0px"}, "slow");
             }
         );
-
     }
 }
+
+/**
+ * Only in the second style, moves the container to reduce the page size
+ */
 function reduceMargin() {
     console.log($('.container').css('margin-left'));
     if($('.container').css('margin-left') == '290px')
@@ -89,6 +101,10 @@ function reduceMargin() {
         $('.container').css('margin-left', '290px');
 }
 
+/**
+ * displays a button when the screen has scrolled more than 120px
+ * @param id
+ */
 function displayAnchor(id) {
     if (window.pageYOffset > 120)
         $(id).fadeIn();
@@ -98,7 +114,7 @@ function displayAnchor(id) {
 
 /* CONTACT */
 /**
- * check if the name is composed only of letters
+ * checks if the name is composed only of letters
  * @param field
  * @returns {boolean}
  */
@@ -117,7 +133,7 @@ function checkName(field) {
     }
 }
 /**
- * check if the mail seems "right"
+ * checks if the mail seems "right"
  * @param field
  * @returns {boolean}
  */
@@ -137,7 +153,7 @@ function checkMail(field) {
 }
 
 /**
- * check if the date is corrected
+ * checks if the date is corrected
  * @param field
  * @returns {boolean}
  */
@@ -157,6 +173,11 @@ function checkBirth(field) {
 
 }
 
+/**
+ * Highlights the field when error or success
+ * @param field
+ * @param erreur
+ */
 function highlight(field, erreur) {
     if(erreur)
         $(field).css('border', '2px solid red')
@@ -167,7 +188,7 @@ function highlight(field, erreur) {
 }
 
 /**
- * display, with the function alert, param str
+ * displays, with the function alert, param str
  * @param str
  */
 function displayAlert(str) {
