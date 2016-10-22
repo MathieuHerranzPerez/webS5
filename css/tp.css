@@ -1,0 +1,35 @@
+html, body {
+    min-height: 100%;
+    margin: 0;
+}
+
+
+.divTP {
+    display: block;
+    overflow: hidden;
+    box-sizing: border-box;     /* pour avoir la bordure "inside" */
+    border: solid 2px white;
+}
+
+.topDiv {
+    width: 100%;
+    height: 10vh;
+    background-color: blue;
+}
+.leftDiv {
+    float: left;
+    width: 40%;
+    height: 80vh;
+    background-color: red;
+}
+.rightDiv {
+    float: left;
+    width: 60%;
+    height: 80vh;
+    background-color: green;
+}
+.bottomDiv {
+    width: 100%;
+    height: 10vh;
+    background-color: yellow;
+}
