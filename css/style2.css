@@ -207,6 +207,7 @@ h1 {
     margin-left: 290px;
     transition: all 0.6s ease 0s;
     margin-right: 5%;
+    padding-top: 50px;
 }
 div.changeStyle {
     margin-right: auto;
