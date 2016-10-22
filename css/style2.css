@@ -8,8 +8,15 @@ body {
     margin: 0;
     padding: 0;
     color: #575959;
-    min-height: 100%;
+    min-height: 100vh;
+
+
+    background: url("../img/fond22.jpg") no-repeat center,
+                url("../img/fond2.jpg") no-repeat center;
+    background-size: cover;
+    overflow-x: hidden;
 }
+
 a,a:hover,a:link,a:visited,a:active,a:focus{
     text-decoration: none;
     color: #6F05A8;
@@ -231,8 +238,7 @@ div#btnStyle1 {
     margin-right: 20%;
 }
 div#btnStyle1:hover {
-    background: url("../img/style11.jpg") no-repeat center;
-    background-size: cover;
+
 }
 
 div#btnStyle2 {
@@ -240,8 +246,7 @@ div#btnStyle2 {
     background-size: cover;
 }
 div#btnStyle2:hover {
-    background: url("../img/style122.jpg") no-repeat center;
-    background-size: cover;
+
 }
 
 /*------------- CV -------------*/
