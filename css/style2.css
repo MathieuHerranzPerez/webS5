@@ -280,7 +280,7 @@ h3 {
 }
 
 .colorJ {
-    background-color: #9FF2F2;
+    background-color: rgba(159, 242, 242, 0.5);
 }
 
 
@@ -339,6 +339,8 @@ input:focus {
     float: right;
 }
 
+/* ---------- FIN CONTACT -----------*/
+
 /*------------QUI SUIS JE------------*/
 
 .logo {
@@ -346,8 +348,6 @@ input:focus {
 }
 
 /*----------FIN QUI SUIS JE----------*/
-
-/* ---------- FIN CONTACT -----------*/
 
 
 .footer {
