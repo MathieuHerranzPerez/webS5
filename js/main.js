@@ -134,7 +134,7 @@ function checkName(field) {
 }
 /**
  * checks if the mail seems "right"
- * @param field id or class of the HTML element
+ * @param {string} field id or class of the HTML element
  * @returns {boolean}
  */
 function checkMail(field) {

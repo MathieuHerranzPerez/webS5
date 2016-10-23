@@ -15,6 +15,7 @@
             <li><a href="tpHtml.php"><span class="maj">TP HTML</span></a></li>
             <li><a href="#"><span class="maj">TP Linux</span></a></li>
             <li><a href="js/out/index.html"><span class="maj">Documentation JS</span></a></li>
+            <li><a href="../../download/explicationsJS.pdf"><span class="maj">Télécharger documentation JS</span></a></li>
         </ul>
     </div>
 
