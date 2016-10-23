@@ -1,8 +1,36 @@
-var styleCss;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: main.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: main.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>var styleCss;
 /**
  * changes the style and creates a cookie
- * @param {string} value value of the cookie
- * @param {string} name name of the cookie
+ * @param value value of the cookie
+ * @param name name of the cookie
  */
 function setStyleCookies(value, name) {
     $('#css').attr('href', 'css/' + value);                     // change style
@@ -18,13 +46,13 @@ function setStyleCookies(value, name) {
 
 /**
  * read the cookie and return its value
- * @param {string} name name of the cookie we have to find
+ * @param name name of the cookie we have to find
  * @returns {*}
  */
 function getStyleCookie(name) {
     var cookContent = document.cookie, cookEnd, i, j;
     name = name + "=";
-    for (i=0, c=cookContent.length; i<c; i++) {
+    for (i=0, c=cookContent.length; i&lt;c; i++) {
         j = i + name.length;
         if (cookContent.substring(i, j) == name) {
             cookEnd = cookContent.indexOf(";", j);
@@ -51,20 +79,20 @@ function readStyleCookie() {
 
 /**
  * Changes the attribute onClick of the drop button when the style has changed
- * @param {string} style name of the current style
+ * @param style name of the current style
  */
 function changeBtn(style) {
     if(style == "style2.css") {
-        $('.dropBtn').replaceWith("<a class=\"dropBtn icon\" href=\"#\" onClick=\"displayMenu('1'), reduceMargin()\">☰</a>");
+        $('.dropBtn').replaceWith("&lt;a class=\"dropBtn icon\" href=\"#\" onClick=\"displayMenu('1'), reduceMargin()\">☰&lt;/a>");
     }
     else {
-        $('.dropBtn').replaceWith("<a class=\"dropBtn icon\" href=\"#\" onClick=\"displayMenu('2')\">☰</a>");
+        $('.dropBtn').replaceWith("&lt;a class=\"dropBtn icon\" href=\"#\" onClick=\"displayMenu('2')\">☰&lt;/a>");
     }
 }
 
 /**
  * displays the menu, used when someone has just clicked on the drop button
- * @param {number} num to know which style is used (1 or 2)
+ * @param num
  */
 function displayMenu(num) {
     if (num == 2) {
@@ -103,7 +131,7 @@ function reduceMargin() {
 
 /**
  * displays a button when the screen has scrolled more than 120px
- * @param {string} id the id of the HTML element
+ * @param id
  */
 function displayAnchor(id) {
     if (window.pageYOffset > 120)
@@ -115,13 +143,13 @@ function displayAnchor(id) {
 /* CONTACT */
 /**
  * checks if the name is composed only of letters
- * @param {string} field id or class of the HTML element
+ * @param field
  * @returns {boolean}
  */
 function checkName(field) {
     console.log($(field).val());
     var regex = new RegExp('[^A-Za-z]');
-    if($(field).val().length < 2 || $(field).val().length > 30 || regex.test($(field).val()))
+    if($(field).val().length &lt; 2 || $(field).val().length > 30 || regex.test($(field).val()))
     {
         highlight(field, true);
         return false;
@@ -134,13 +162,13 @@ function checkName(field) {
 }
 /**
  * checks if the mail seems "right"
- * @param field id or class of the HTML element
+ * @param field
  * @returns {boolean}
  */
 function checkMail(field) {
     var regex = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
     console.log(regex.test($(field).val()));
-    if($(field).val().length < 5 || $(field).val().length > 50 || !regex.test($(field).val()))
+    if($(field).val().length &lt; 5 || $(field).val().length > 50 || !regex.test($(field).val()))
     {
         highlight(field, true);
         return false;
@@ -154,7 +182,7 @@ function checkMail(field) {
 
 /**
  * checks if the date is corrected
- * @param {string} field id or class of the HTML element
+ * @param field
  * @returns {boolean}
  */
 function checkBirth(field) {
@@ -175,11 +203,11 @@ function checkBirth(field) {
 
 /**
  * Highlights the field when error or success
- * @param {string} field id or class of the HTML element
- * @param {boolean} error
+ * @param field
+ * @param erreur
  */
-function highlight(field, error) {
-    if(error)
+function highlight(field, erreur) {
+    if(erreur)
         $(field).css('border', '2px solid red')
                 .css('background-color', '#FFD5D4');
     else
@@ -189,19 +217,20 @@ function highlight(field, error) {
 
 /**
  * displays, with the function alert, param str
- * @param {string} str a sentence to display
+ * @param str
  */
 function displayAlert(str) {
     alert(str);
 }
-/* FIN CONTACT */
+
+
 
 $(document).ready(function() {
     readStyleCookie();
 
     window.onresize = function() {
         var theWidth = window.innerWidth;
-        if(theWidth > 1080 && styleCss == "main.css") {
+        if(theWidth > 1080 &amp;&amp; styleCss == "main.css") {
             $('.ulTopNav').css('display','block');
         }
     };
@@ -213,3 +242,26 @@ $(document).ready(function() {
         });
     });
 });
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#changeBtn">changeBtn</a></li><li><a href="global.html#checkBirth">checkBirth</a></li><li><a href="global.html#checkMail">checkMail</a></li><li><a href="global.html#checkName">checkName</a></li><li><a href="global.html#displayAlert">displayAlert</a></li><li><a href="global.html#displayAnchor">displayAnchor</a></li><li><a href="global.html#displayMenu">displayMenu</a></li><li><a href="global.html#getStyleCookie">getStyleCookie</a></li><li><a href="global.html#highlight">highlight</a></li><li><a href="global.html#readStyleCookie">readStyleCookie</a></li><li><a href="global.html#reduceMargin">reduceMargin</a></li><li><a href="global.html#setStyleCookies">setStyleCookies</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.2</a> on Sun Oct 23 2016 18:33:01 GMT+0200 (CEST)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
