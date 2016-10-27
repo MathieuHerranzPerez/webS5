@@ -56,9 +56,13 @@ function readStyleCookie() {
 function changeBtn(style) {
     if(style == "style2.css") {
         $('.dropBtn').replaceWith("<a class=\"dropBtn icon\" href=\"#\" onClick=\"displayMenu('1'), reduceMargin()\">☰</a>");
+        $('#btnStyle2').css('display', 'none');
+        $('#btnStyle1').css('display', 'block');
     }
     else {
         $('.dropBtn').replaceWith("<a class=\"dropBtn icon\" href=\"#\" onClick=\"displayMenu('2')\">☰</a>");
+        $('#btnStyle1').css('display', 'none');
+        $('#btnStyle2').css('display', 'block');
     }
 }
 

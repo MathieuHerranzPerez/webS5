@@ -5,10 +5,11 @@
 
 body {
     font-family: 'forgotten futurist rg',Roboto, Arial, sans-serif;
-    margin: 0;
+    margin: auto auto;
     padding: 0;
     color: #575959;
     min-height: 100vh;
+    max-width: 2500px;
 
 
     background: url("../img/fond22.jpg") no-repeat center,
@@ -205,7 +206,6 @@ h1 {
 
 .container {
     margin-left: 290px;
-    transition: all 0.6s ease 0s;
     margin-right: 5%;
     padding-top: 50px;
 }
@@ -223,7 +223,7 @@ div.center {
 div.btnStyle {
     width: 40%;
     height: 80%;
-    float: left;
+    margin: auto;
     cursor: pointer;
     transition: all 0.2s ease 0s;
 }
@@ -236,7 +236,6 @@ div.btnStyle:hover {
 div#btnStyle1 {
     background: url("../img/style1.jpg") no-repeat center;
     background-size: cover;
-    margin-right: 20%;
 }
 div#btnStyle1:hover {
 

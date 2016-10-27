@@ -12,13 +12,8 @@
 
 <body>
     <!-- quatre div pour nos quatre blocs-->
-    <div class="divTP topDiv">
-    </div>
-    <div class="divTP leftDiv">
-    </div>
-    <div class="divTP rightDiv">
-    </div>
-    <div class="divTP bottomDiv">
-</div>
-
+    <div class="divTP topDiv"></div>
+    <div class="divTP leftDiv"></div>
+    <div class="divTP rightDiv"></div>
+    <div class="divTP bottomDiv"></div>
 </body>

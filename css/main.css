@@ -12,7 +12,8 @@
 
 body {
     font-family: Roboto, Arial, sans-serif;
-    margin: 0;
+    margin: auto auto;
+    max-width: 2500px;
     padding: 0;
     color: #2E2E2E;
 }
@@ -170,10 +171,10 @@ div.center {
 div.btnStyle {
     width: 40%;
     height: 80%;
-    float: left;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
     cursor: pointer;
     transition: all 0.2s ease 0s;
+    margin: auto;
 }
 div.btnStyle:hover {
     transform: scale(1.1);
@@ -181,7 +182,6 @@ div.btnStyle:hover {
 div#btnStyle1 {
     background: url("../img/style1.jpg") no-repeat center;
     background-size: cover;
-    margin-right: 20%;
 }
 div#btnStyle2 {
     background: url("../img/style12.jpg") no-repeat center;
