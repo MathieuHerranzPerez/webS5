@@ -16,6 +16,9 @@
             <li><a href="#"><span class="maj">TP Linux</span></a></li>
             <li><a href="js/out/index.html"><span class="maj">Documentation JS</span></a></li>
             <li><a href="../../download/explicationsJS.pdf"><span class="maj">Télécharger documentation JS</span></a></li>
+            <li><a href="http://mathieuherranzperez.alwaysdata.net/"><span class="maj">Puissance 4</span></a></li>
+            <li><a href="../../download/JavaScript.pptx"><span class="maj">JavaScript PowerPoint</span></a></li>
+            <li><a href="jsExemple.php"><span class="maj">JS exemples</span></a></li>
         </ul>
     </div>
 

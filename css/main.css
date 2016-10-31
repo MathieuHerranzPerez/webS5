@@ -108,7 +108,7 @@ ul.ulTopNav li.active {
     float: right;
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1180px) {
     ul.ulTopNav {
         display: none;
         float: none;
@@ -126,9 +126,6 @@ ul.ulTopNav li.active {
     .ongletPage {
         float: none;
     }
-}
-@media screen and (min-width: 1081px) {
-
 }
 
 /*------------- FIN MENU ------------- */

@@ -5,15 +5,13 @@ var styleCss;
  * @param {string} name name of the cookie
  */
 function setStyleCookies(value, name) {
-    $('#css').attr('href', 'css/' + value);                     // change style
-
     styleCss = value;
     var today = new Date();
     var expires = new Date();
     expires.setTime(today.getTime() + (360*24*60*60*1000));     // 1 year
     document.cookie = name + "=" + encodeURIComponent(value) + ";expires=" + expires.toGMTString();
 
-    changeBtn(value);
+    readStyleCookie();
 }
 
 /**
@@ -42,7 +40,6 @@ function getStyleCookie(name) {
  */
 function readStyleCookie() {
     var style = getStyleCookie('style');
-    styleCss = style;
     if(style != null) {
         $('#css').attr('href', 'css/' + style);
     }
@@ -98,7 +95,6 @@ function displayMenu(num) {
  * Only in the second style, moves the container to reduce the page size
  */
 function reduceMargin() {
-    console.log($('.container').css('margin-left'));
     if($('.container').css('margin-left') == '290px')
         $('.container').css('margin-left', '28px');
     else
@@ -123,7 +119,6 @@ function displayAnchor(id) {
  * @returns {boolean}
  */
 function checkName(field) {
-    console.log($(field).val());
     var regex = new RegExp('[^A-Za-z]');
     if($(field).val().length < 2 || $(field).val().length > 30 || regex.test($(field).val()))
     {
@@ -143,7 +138,6 @@ function checkName(field) {
  */
 function checkMail(field) {
     var regex = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
-    console.log(regex.test($(field).val()));
     if($(field).val().length < 5 || $(field).val().length > 50 || !regex.test($(field).val()))
     {
         highlight(field, true);
@@ -163,7 +157,6 @@ function checkMail(field) {
  */
 function checkBirth(field) {
     var regex = /^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/;
-    console.log(regex.test($(field).val()));
     if(!regex.test($(field).val()))
     {
         highlight(field, true);
@@ -174,9 +167,7 @@ function checkBirth(field) {
         highlight(field, false);
         return true;
     }
-
 }
-
 /**
  * Highlights the field when error or success
  * @param {string} field id or class of the HTML element
@@ -205,10 +196,20 @@ $(document).ready(function() {
 
     window.onresize = function() {
         var theWidth = window.innerWidth;
-        if(theWidth > 1080 && styleCss == "main.css") {
+        if(theWidth > 1180 && styleCss == "main.css") {
             $('.ulTopNav').css('display','block');
         }
     };
+
+    $('#inFirstName').keypress(function() {
+        checkName("#inFirstName");
+    });
+    $('#inLastName').keypress(function() {
+        checkName("#inLastName");
+    });
+    $('#inMail').keypress(function() {
+        checkMail("#inMail");
+    });
     /* when you click on an anchor link */
     $('.returnHLink').click(function(){
         var id = $(this).attr("href");
