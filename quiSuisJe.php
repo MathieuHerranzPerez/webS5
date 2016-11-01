@@ -35,9 +35,12 @@
                 </tr>
             </table>
 
-            description par <a href="#"><span class="maj">Amna</span></a>, <a href="#"><span class="maj">Anaïs</span></a>,
-            <a href="#"><span class="maj">Florian</span></a>, <a href="#"><span class="maj">Guillaume</span></a>,
-            <a href="#"><span class="maj">Isis</span></a> et <a href="#"><span class="maj">Vincent</span></a>.
+            description par <a href="http://amna.amairi.etu.perso.luminy.univ-amu.fr"><span class="maj">Amna</span></a>,
+            <a href="http://anais.ait-said.etu.perso.luminy.univ-amu.fr"><span class="maj">Anaïs</span></a>,
+            <a href="http://florian-gros.alwaysdata.net/"><span class="maj">Florian</span></a>,
+            <a href="http://guillaume.bardet.etu.perso.luminy.univ-amu.fr"><span class="maj">Guillaume</span></a>,
+            <a href="http://isis.alie.etu.perso.luminy.univ-amu.fr"><span class="maj">Isis</span></a> et
+            <a href="http://vincent.bogi.etu.perso.luminy.univ-amu.fr"><span class="maj">Vincent</span></a>.
 
             <a class="right" href="https://www.facebook.com/profile.php?id=100009885273406">
                 <img class="logo" src="img/logoFacebook.png" alt="logo facebook">
