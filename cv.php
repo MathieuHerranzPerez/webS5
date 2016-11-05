@@ -13,7 +13,7 @@
         <div id="ancre"></div>
         <div class="container">
             <div class="cv">
-                <a href="download/CV_General_MathieuHerranzPerez.pdf"><span class="maj">Mon Cv</span></a>
+                <a href="download/CV_General_MathieuHerranzPerez.pdf"><span class="maj">Télécharger Cv</span></a>
                 <hr/>
                 <div>
                     <h2>Mathieu HERRANZ PEREZ</h2>
